@@ -458,7 +458,7 @@ void Application::Start() {
 
     xTaskCreate([](void* arg) {
         Application* app = (Application*)arg;
-        app->CheckNewVersion();
+        //app->CheckNewVersion();
         vTaskDelete(NULL);
     }, "check_new_version", 4096 * 2, this, 2, nullptr);
 
