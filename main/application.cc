@@ -518,6 +518,10 @@ void Application::Start() {
         });
     });
     wake_word_detect_.StartDetection();
+#else
+//没有配置唤醒词检测时，代码唤醒
+SetDeviceState(kDeviceStateIdle);
+WakeWordInvoke("你好，阿凸曼");
 #endif
 
     SetDeviceState(kDeviceStateIdle);
