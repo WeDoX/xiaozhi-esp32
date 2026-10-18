@@ -48,6 +48,7 @@ public:
     virtual bool GetBatteryLevel(int &level, bool& charging, bool& discharging);
     virtual std::string GetJson();
     virtual void SetPowerSaveMode(bool enabled) = 0;
+    virtual void ToggleServoDirectionRepeated(uint32_t count) {}
 };
 
 #define DECLARE_BOARD(BOARD_CLASS_NAME) \
